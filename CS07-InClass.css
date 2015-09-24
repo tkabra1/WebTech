@@ -1,0 +1,51 @@
+table{
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Arial;
+            color: navy;
+        }
+            tr, td{
+                border:1px solid black;
+                padding: 3px;
+                vertical-align: top;
+                
+            }
+            
+            img{
+                width: 100%
+                
+            }
+            
+            td.pic{
+                width:70%;
+                
+                
+            }
+            
+            td#last{
+                
+                Width:35%;
+               
+            }
+            
+            td.thirtyfive{
+                
+                width:35%;
+               
+            }
+            
+            body{
+                
+                background-image: url(Images/backgroundimage7.jpg);
+            }
+            
+            p.scroll{
+                Background-color: lime;
+                Width:250px; height=300px;
+                overflow: scroll;
+                Padding-right:10px;
+                Padding-left:10px;
+                margin-right: auto;
+                margin-left: auto;
+            }
