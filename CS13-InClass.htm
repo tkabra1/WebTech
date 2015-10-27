@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS13-InClass</title>
+
+	<style type="text/css">
+	
+	body {text-align:center;}
+	
+	</style>
+	<script type="text/javascript">
+
+		function enlargeImage(){
+			
+			var myImage = document.getElementById("usa");
+			var w=myImage.width;
+			w = w*1.5;
+			myImage.width=w;
+			
+		}
+		
+		function returnImage(){
+			
+			var myImage = document.getElementById("usa");
+			var w=myImage.width;
+			w = 400;
+			myImage.width=w;
+			
+		}
+		
+		function enlargeImage2(){
+			
+			var myImage = document.getElementById("globe");
+			var w=myImage.width;
+			w = w*1.5;
+			myImage.width=w;
+			
+		}
+		
+		function returnImage2(){
+			
+			var myImage = document.getElementById("globe");
+			var w=myImage.width;
+			w = 400;
+			myImage.width=w;
+			
+		}
+		
+	</script>
+  </head>
+
+  <body>
+	
+    <h2> Manipulating Styles and Images </h2>
+    
+    <p><img onmouseover="enlargeImage()" onmouseout="returnImage()" id="usa" src="Images/usa.png" alt="Image goes here" title ="map of USA" width="400"/></p>
+	   <hr/>
+	    <p><img onmouseover="enlargeImage2()" onmouseout="returnImage2()" id="globe" src="Images/globe.jpg" alt="Image goes here" title ="Globe" width="400"/></p>
+    
+	
+	
+    
+ 
+
+
+  </body>
+</html>

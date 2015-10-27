@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	        <title>Homework 3</title>
+    
+    <style>
+    body {background-color: black; background-image: url("images/beaver.jpg");
+         background-repeat: repeat-x; background-position: bottom; background-attachment: fixed;}
+    table {background-color:silver; margin-left: auto; margin-right: auto;
+        border: 2px solid black; table-layout: fixed; width: 750px;}
+    button#oops {background-color:red;}
+    
+    td#buttons {text-align: center;}
+    tr, td{ border: 2px solid black; font-family: arial;}
+    
+    tr#white {background-color: white; text-align: center;}
+    .yellow {background-color: yellow;}
+    td#color {width: 26%;}
+    td#intent {width: 20%;}
+    
+    caption {font-size: 3em; color: white; padding-bottom: 30px;}
+    tr#headings {text-align: center;}
+   
+    td.image {text-align: center;}
+   
+</style> 
+               
+    </head>
+
+
+    <body>
+        
+        <form>
+                
+                <table>
+    <caption>Soap Survey</caption>
+    <tr id="headings"><td>Soap Image</td><td id="color">Soap Color<br>Preference</td><td id="intent">Soap Purchase<br>Intent</td><td>Soap Features Liked</td></tr>
+    
+    <tr><td class="image"><img src="Images/pearssoap.jpg" width="125"></td>
+    
+        <td><input type="radio" name="color1" value="Green"/>Green<br>
+        <input type="radio" name="color1" value="Gold"/>Gold (shown)<br>
+        <input type="radio" name="color1" value="Red"/>Red</td>
+        
+        
+        <td>At $5.00/unit<br>
+        <select name="purchase intent 1">
+            <option value="5">Definitely Buy</option>
+            <option value="4">Likely Buy</option>
+            <option value="3">Undecided</option>
+            <option value="2">Unlikely Buy</option>
+            <option value="1">Not Buy</option>
+                    
+                    </select></td>
+        
+      
+        <td>
+            <input type="checkbox" name="Feautres1" value="Shape" />Shape<br>
+            <input type="checkbox" name="Feautres1" value="Size" />Size<br>
+            <input type="checkbox" name="Feautres1" value="Smell" />Smell<br>
+            <input type="checkbox" name="Feautres1" value="Green" />Texture</td></tr>
+
+        <tr><td class="image"><img src="Images/mysoresandalsoap.jpg" width="125"></td>
+            <td><input type="radio" name="Color2" value="Ivory" />Ivory<br>
+                <input type="radio" name="Color2" value="Sandal Wood" />SandalWood (Shown)<br>
+                <input type="radio" name="Color2" value="Pink" />Pink
+                
+                </td>
+        
+        <td>At $8.00/unit<br>
+        
+            <select name="purchase intent 2">
+            <option value="5">Definitely Buy</option>
+            <option value="4">Likely Buy</option>
+            <option value="3">Undecided</option>
+            <option value="2">Unlikely Buy</option>
+            <option value="1">Not Buy</option>
+                </select>
+                </td>
+        
+        
+        <td><input type="checkbox" name="Feautres2" value="Shape" />Shape<br>
+        <input type="checkbox" name="Feautres2" value="Size" />Size<br>
+        <input type="checkbox" name="Feautres2" value="Smell" />Smell<br>
+        <input type="checkbox" name="Feautres2" value="Green" />Texture</td></tr>   
+   
+    <tr id="white"><td colspan="4">Tell us about yourself...</td></tr>
+    
+        <tr><td>Gender: <select name="gender">
+            <option value="0">Male</option>
+            <option value="1">Female</option> </select></td>
+            <td colspan="3"> Age: (under 25 enter 1, 25-40 enter 2, else enter 3)
+                <input class="yellow" type="text" name="age" maxlength="3" size="5"/></td> 
+           
+    <tr>
+        <td colspan="2">Your comments are welcome:<br>
+        <textarea class="yellow" name="comments" cols="51" rows="10"> </textarea></td>
+        <td id="buttons" colspan="2"><button type="submit" value="Submit" name="Submit">Done</button>
+        <button id="oops" type="reset" value="Reset" name="Reset">Oops</button>
+        </tr>
+   
+                </table> 
+                
+            </form>
+            
+        </body>
+        
+</html>

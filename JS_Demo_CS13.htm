@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>JavaScript Demo in CS13</title>
+		
+		<script>
+			function changeColor(){
+				var myTitle=document.getElementById("Tan");
+				myTitle.style.color="red";
+				myTitle.style.fontSize="1em";
+				
+			}
+			
+			function calculate(){
+				
+				var x = 2015;
+				var y = x + 1;
+				
+				var lastName="Kabra";
+				var firstName="Tan";
+				var name = firstName + " " + lastname;
+				alert("Welcome " + name);
+				
+				document.getElementById("x").innerHTML = x;
+				document.getElementById("y").innerHTML = y;
+				document.getElementById("result").innerHTML = y%x;
+				document.getElementById("z").innerHTML = 2015 % 10;
+				
+				alert(x*y);
+			}
+			
+			</script>
+		
+		
+		</head>
+		
+		<body>
+			
+			<h1 id="Tan" onclick="changeColor()">My First Heading (Click Me!)</h1>
+			
+			<p> x = <span id="x"> ? </span></p>
+			<p> y = <span id="y"> ? </span></p>
+			<p> The result is <span id="result"> ? </span></p>
+			<p>The last digit of 2015 is <span id="z"> ? </span></p>
+			<button onclick="calculate()">Click Me! </button>
+			
+			
+			
+	</body>
+			
+			
+</html>

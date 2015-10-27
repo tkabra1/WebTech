@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>CS14 Demo</title>
+		<script>
+			function ask(){
+				/*
+				var today = prompt("What date is it today?", "1");
+				document.getElementById("userInput").innerHTML=today;
+				
+				var president = prompt("Who is the current President of the USA?", "Ex. George Washington");
+				document.getElementById("userInput2").innerHTML=today;
+				
+				if((today == 20) && (president == "Obama")){	
+					document.getElementById("result").innerHTML="Correct!";
+				}
+				
+			}
+			*/
+			
+			var x = prompt("What is your gender?", "");
+			document.getElementById("userInput").innerHTML = x;
+			if(x=="male"){
+				
+				alert("Hello, Sir!");
+				alert("How old are you?");
+			
+			}
+			
+			else if(x == female){
+				alert("Hello, madam!");
+				alert("You look really young!");
+			}
+			
+			else{
+				alert("Hello, robot!");
+			}
+			
+		}
+			
+			</script>
+			
+			</head>
+			
+			<body>
+				<button onclick="ask()">Click Me!</button>
+				<p>Date: <span id="userInput"></span></p>
+				<p>President: <span id="userInput2"></span></p>
+				<br>
+				<p>Result: <span id="result"></span></p>
+				
+				
+				</body>
+				
+				</html>

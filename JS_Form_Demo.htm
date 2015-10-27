@@ -1,0 +1,44 @@
+<html>
+	<head>
+	<title>Form Demo</title>
+	
+	<script>
+		
+		function ask(){
+			var form1 = document.getElementById("myForm");
+			var lName = form1.lastName.value;
+			document.getElementById("span1").innerHTML=lName;
+		}
+		
+		function changeBrowser(){
+			var form1 = document.getElementById("myForm");
+			var browser = form1.browswer.value
+			document.getElementById("span2").innerHTML=browser;
+		}
+		
+		</script>
+	
+	<body>
+		
+		<form id="myForm" action="">
+			Last Name: <input type="text" name="lastName" maxlength="30"/>
+			Select the browsers you like:
+			
+			<select name="browser" onchange="changeBrowser()">
+				<option value="firefox">Firefox</option>
+				<option value="chrome">Chrome</option>
+				<option value="safari">Safari</option>
+			</select>
+			
+			</form>
+				
+				
+			</form>
+			
+			<button onclick="ask()">Click!</button>
+			<p>You entered: <span id="span1"></span></p>
+			<p>Browser: <span id ="span2"></span></p>
+		
+	</body>
+	
+</html>

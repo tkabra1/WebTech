@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Practice Problem - 1</title>
+
+	<style type="text/css">
+	    h1, h2, h3 {text-align:center; font-family:Arial; color:Navy;}
+	    p{width:60%; font-family:Arial; color:Navy;text-align:justify;
+	        padding-left:200px;font-size:large}
+	    .border {border:5px solid blue; margin-left:150px;}
+	</style>
+	
+	<script type="text/javascript">
+    
+        function change(id){
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var h = document.getElementById("header1");
+            
+            if (id=="p1"){
+                p1.style.backgroundColor= "yellow";
+                p2.style.backgroundColor= "lime";
+                p3.style.borderColor = "red";
+                h.innerHTML = "Go Paragraph 1";
+                
+            }
+            else if (id=="p2"){
+                p1.style.backgroundColor= "lime";
+                p2.style.backgroundColor= "yellow";
+                p3.style.borderColor = "black";
+                h.innerHTML = "Go Paragraph 2";
+            }
+            
+            else {
+                p1.style.backgroundColor= "maroon";
+                p2.style.backgroundColor= "orange";
+                p3.style.borderColor = "green";
+                h.innerHTML = "Go Paragraph 3";
+            }
+            
+            
+        }
+    
+	   /* 
+        function changeP1(){
+            
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var h = document.getElementById("header1");
+            p1.style.backgroundColor= "yellow";
+            p2.style.backgroundColor= "lime";
+            h.innerHTML = "Go Paragraph 1";
+            
+        }
+        
+         function changeP2(){
+            
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var h = document.getElementById("header1");
+            p1.style.backgroundColor= "lime";
+            p2.style.backgroundColor= "yellow";
+            h.innerHTML = "Go Paragraph 2";
+            
+        }
+           */
+        
+	</script>
+    
+  </head>
+
+  <body>
+    <h1> Practice Problem - CS15-InClass1</h1>
+    <hr />
+    <p>Please create the functionality to do the following: (a) When you click the first paragraph below, the background color of the first paragraph must change to yellow and that of the second paragraph must change to lime. The heading must be changed to "Go Paragraph 1". When you click the second paragraph, the background color of the second paragraph must be yellow and that of the first must be lime. The heading must be changed to "Go Paragraph 2".</p>
+   
+    <hr/>
+    <h2> Paint the Paragraph</h2>
+    
+    <h3 id ="header1">This is the heading that should change</h3>
+    
+    <p class="border" id="p1" onclick="change(this.id)">
+	This is paragraph 1
+    </p>
+    
+    <p></p>
+    
+    <p class="border" id="p2" onclick="change(this.id)">
+    This is paragraph 2
+    </p>
+    
+     <p class="border" id="p3" onclick="change(this.id)">
+    This is paragraph 3
+    </p>
+    
+    
+  </body>
+  
+</html>
