@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+	   <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	   
+	   <title>CS16 - Practice</title>
+        
+        <script>
+			
+            function changeHeader(id){
+            
+            var header = document.getElementById("header");
+            
+            if (id == "practice"){
+               header.innerHTML="Practice Problem";
+               header.style.color="navy";
+               header.style.fontFamily="Lucida Handwriting";
+            }
+            
+            else if (id == "boring"){
+                header.innerHTML="Boring Stuff";
+                header.style.color="red";
+                header.style.fontFamily="Arial";
+            }
+            
+            else {
+                header.innerHTML="Don't know what I am doing";
+                header.style.color="olive";
+                header.style.fontFamily="Cursive";
+            } 
+               
+            }
+            
+        </script>
+        
+    </head>
+
+    <body>
+	   <h1 id="header"> Change the Heading</h1>
+        
+        <h3 id="practice" onclick="changeHeader(this.id)"> a. Practice Problem</h3>
+		
+        <h3 id="boring" onclick="changeHeader(this.id)"> b. Boring Stuff</h3>
+		
+        <h3 id="dont" onclick="changeHeader(this.id)"> c. Don't know what I am doing</h3>
+
+        <p> WHen the user clicks on any one of the choices above, please change the title to the statement corresponding to that choice. For choice (a) set the font color to navy and the font to Lucida Handwriting. For (b), red and Arial and for (c) Olive and Cursive.
+        </p>
+        
+ 
+    
+    </body>
+	
+	
+</html>
