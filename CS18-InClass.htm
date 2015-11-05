@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Quiz: calculate the sum</title>
+    <style type="text/css">
+            form {font-family:Arial; font-weight:bold; padding:60px; width:50%; margin-right:auto; margin-left:auto;
+                  background-color: Silver;}
+            h1 {font-family:Arial; font-weight:bold; text-align:center;}
+            p#p1 {margin-bottom: 40px;}
+        </style>
+    <script>
+          function sum(){
+                    var myForm = document.getElementById("form1");
+					var x = myForm.from.value;
+                    var y = myForm.to.value;
+					var sum=0;
+					var text = document.getElementById("result");
+                    x = parseFloat(x);
+                    y = parseFloat(y);
+                    var i;
+                    for (i=x; i<=y; i++){
+                        sum = sum + i
+                    }
+                    text.innerHTML = sum;
+                    return false;
+                    
+				}
+            
+                
+
+    </script>
+</head>
+<body>
+    <h1> Another Simple Calculator</h1>
+        <form id="form1" action="" method="post">
+            <p id="p1">
+            From:  <input type="text" name="from" size="10" />
+            To:    <input type="text" name="to" size="10" />
+            </p>
+            <p>
+                <input onclick="return sum()" type="submit" name="Sum" value="SUM" style="width:80px; height:40px;"/> 
+                <input type="reset" name="reset" value="CLEAR" style="width:80px; height:40px;"/>
+            </p>			
+            <p>The sum is <span id="result"></span>.</p>
+        </form>
+    
+    
+</body>
+</html>
