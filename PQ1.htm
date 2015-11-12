@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Final Exam Question #2 - Summer 2011</title>
+
+	<style type="text/css">
+	h1, h3 {text-align:center; font-family:Arial; color:Navy;}
+	img {border:3px solid black;}
+	p {text-align:center;}
+	button {width:100px; height:50px;}
+	h2 {margin:20px 150px 20px 150px;}
+	</style>
+	
+	<script type="text/javascript">
+	function change(id){
+    var text = document.getElementById("text");
+    var img = document.getElementById("tiger");
+    var tiger1 = document.getElementById("tiger1");
+    var tiger2 = document.getElementById("tiger2");
+    
+    if (id=="tiger1"){
+      text.innerHTML="Tiger 1";
+      img.src="Images/tiger1.jpg"; 
+    }
+    
+    else{
+      text.innerHTML="Tiger 2";
+      img.src="Images/tiger2.jpg";
+    }
+  }
+	</script>
+  </head>
+
+  <body>
+    <h1> Final Exam - Question 2 (20 points)</h1>
+    <hr />
+    <h2>Please create the functionality to do the following: (a) When the "Tiger 1" button is clicked, please
+    display the image "tiger1.jpg" (7 points). Change the heading "Manage the Image" to "Tiger 1"(3 points). When the "Tiger 2" button is clicked, 
+    please display "tiger2.jpg" (7 points - the first image should not be seen any more). The heading must now say "Tiger 2" (3 points).</h2>
+   
+    <hr />
+    <h3 id="text"> Manage the Image </h3>
+    <p>
+	<img onclick="change(this.id)" id="tiger" src="" alt="The Image Goes Here" title="The Image" />
+    </p>
+    <p>
+        <button onclick="change(this.id)" id="tiger1">Tiger 1</button> &nbsp; &nbsp; &nbsp;
+        <button onclick="change(this.id)" id="tiger2">Tiger 2</button>
+    </p>
+
+
+
+  </body>
+</html>

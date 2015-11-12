@@ -1,0 +1,67 @@
+﻿
+<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Final Exam Question #5 - Summer 2011</title>
+
+	<style type="text/css">
+	h1, h3 {text-align:center; font-family:Arial; color:Navy;}
+	img {width:300px; height:200px;}
+	p {text-align:center;}
+	button {width:200px; height:50px;}
+	h2 {margin:20px 150px 20px 150px; font-size:x-large;}
+	</style>
+	
+	<script type="text/javascript">
+	    /* Your JavaScript goes here */
+	    function change() {
+	        var myForm = document.getElementById("form1");
+	        myForm.results.value = myForm.gender.value;
+	        if (myForm.major.value == "" || myForm.status.value == "" || myForm.gender.value == "") {
+	            alert("Please finish!");
+	        }
+	        else if (myForm.gender.value != "M" && myForm.gender.value != "F") {
+	            alert("Please enter either 'M' or 'F' for gender.");
+	        }
+	        else {
+	            myForm.results.value = myForm.major.value + "\n" + myForm.status.value + "\n" + myForm.gender.value;
+	        }
+	        return false;
+	    }
+	</script>
+  </head>
+
+  <body>
+    <h1> Final Exam - Question 5 (20 points)</h1>
+    <hr />
+    <h2>Please create the following functionality using the form given below. User will first enter
+    his/her major field of study, his/her status (FR, SO, JR or SR) and his/her gender. Please validate
+    the fields to make sure that none of the fields are blank and that the value entered in gender is one 
+    of either "M" or "F" (in uppercase only) (8 points). Show the data that the user has entered in the text area 
+    labeled "Results" (10 points). All of this must be performed when the user exits the field labeled "Gender:" (2 points)
+    This will require the use of "return" when you call the function.
+     </h2>
+    <hr />
+    <h3> Present the Result </h3>
+    <hr />
+    <form id="form1" action="">
+    <p>
+    &nbsp;Your Major Field of Study: <input type="text" name="major" size="10" /> 
+    </p>
+    <p>
+    &nbsp;Your Status (FR, SO, JR or SR): <input type="text" name="status" size="4" /> 
+    </p>
+    <p>
+    Your Gender (M or F only, in uppercase): <input type="text" name="gender" size="4" onchange="return change()"/>  
+    </p>
+    <p>
+    Results: <br /><textarea name="results" rows="3" cols="40"></textarea> 
+    </p>
+    </form>
+    
+    
+  </body>
+</html>

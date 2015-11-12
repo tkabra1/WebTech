@@ -1,17 +1,77 @@
 <html>
 	<head>
 		<title>Tan Kabra - Serial Entrepreneur</title>
+		
+		<style type="text/css">
+		
+        h1 {
+            color: white; 
+            text-align: center;
+            font-family: BebasNeue;
+            }
+        p {
+            text-align: center;
+            }
+			
+		body {
+           background-image: url(citylights.jpeg);
+		   background-repeat: no-repeat;
+		   background-size: cover;
+		   color: white;
+        }
+		
+		p {
+			font-family:arial; color:white; border-color: white; font-size: 2em;
+		}
+		
+		.border {
+			border:5px solid white;
+		}
+	
+		
+		
+		
+        
+        </style>
+		
+		<script>
+			
+		var slides = new Array ("banner1.jpg", "banner2.jpg", "banner3.jpg", "banner4.jpg", "banner5.jpg", "banner6.jpg")
+        var i = 0;
+		
+       	function animate(){
+           var img = document.getElementById("banner"); 
+           if (i == slides.length){
+               i=0;       
+           }
+           
+           img.src=slides[i];        
+           i++;      
+           setTimeout("animate()", 1000); 
+       }
+			</script>
+		
 		</head>
 		
-		<body>
-			<table>
+		<body onload = "animate()">
+			
+			<table align="center">
 				<tr><td>Home</td><td><a href="About.htm">About</a></td><td><a href="Startups.htm">Start Ups</a></td><td><a href="Contact.htm">Contact</a></td>
 			</table>
-			<hr>
-			<table>
-				<tr> <td>
+			
+			<p>TAN KABRA</p>
+			
+			<img id = "banner" src="Images/banner1.jpg" alt="Slide Show of Tan" title="tan" />
+			<br>
+			<br>
+			<p class = "border">
+				<a href="About.htm">ENTER</a>
+			</p>	
+			
+				<br>
 					
-			<img src="HeadText.png" alt="Who is "Tan?" title="HeadText">
+			<img src="HeadText.png" alt="Who is Tan?" title="HeadText">
+			<br>
 			
 			<a href="www.twitter.com/tankabra">Twitter</a>    <a href="www.linkedin.com/tankabra">LinkedIn</a>    <a href="www.facebook.com/tankabra">Facebook</a>
 			
@@ -35,12 +95,10 @@
 				
 				<img src="logo-01.png" height="50" alt="VetX logo" title="vetx logo"> <img src="Climaxlogo.png" height="75" alt="climax entertainment group logo" title="ceg logo">							
 				<br>
-				</td>
-				<td>
+				
+				
 				<img src="Headshot.png" alt="Headshot of his holyness Tan" title="Tan's face">
-				</td>
-				</tr>
-				</table>
+				
 				
 				<p>Have questions? Need advice? <a href="Contact.htm">Send me a message!</a></p>
 			

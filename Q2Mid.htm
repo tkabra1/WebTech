@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title></title>
+        <style type="text/css">
+            table {
+                margin-right: auto;
+                margin-left: auto;
+            }
+            img {
+                width: 70%;
+            }
+            h1 {
+                text-align: center;
+                font-family: Arial;
+                color: Navy;
+            }
+            p {
+                margin-left: 300px;
+                margin-right: 300px;
+                font-size: 14pt;
+            }
+
+        </style>
+        
+<script>
+     function change(id){
+        var smiley = document.getElementById("smiley");
+        var frown = document.getElementById("frown");
+        var text1 = document.getElementById("text1");
+        var text2 = document.getElementById("text2");
+        if (id=="smiley"){
+            text1.style.color="red";
+            text1.style.fontFamily="Lucida Handwriting";
+            text1.style.fontSize="2em";
+            text1.style.backgroundColor="yellow";
+            text1.innerHTML="Web Tech Rocks!";
+            text2.innerHTML="";
+        }
+        else{
+            text2.style.color="green";
+            text2.style.fontFamily="Arial";
+            text2.style.fontSize="2em";
+            text2.style.fontWeight="bold";
+            text2.innerHTML="Web Tech Sucks!";
+            text1.innerHTML="";
+            text1.style.backgroundColor="white";
+            
+        }
+     }
+
+
+</script>      
+       
+       
+       
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1>Reflect the Image (20 points)</h1>
+        
+        <p> 
+            There are two images shown below along with two text strings. Create the functionality whereby if you click on the Smiley.jpg image, 
+            the text string "Web Tech Rocks" is shown in red font, size 2em, using Lucida Handwriting with a yellow background. If you click on 
+            frown.jpg image, the string "Web Tech Sucks" is shown in green font, bold, size 2em, and using Arial. When one text string is shown, 
+            the other should not be displayed. Use as many functions as you see necessary to complete this functionality.
+        </p>
+
+        <table>
+            <tr>
+                <td><img onclick="change(this.id)" id="smiley" src="Images/smiley(2).jpg" alt="Smiling Face" title="Smile" /></td>
+                <td id="text1">Web Tech Rocks!</td>
+            </tr>
+            <tr>
+                <td><img onclick="change(this.id)" id="frown" src="Images/frown.jpg" alt="Frown Face" title="Sad" /></td>
+                <td id="text2">Web Tech Sucks!</td>
+            </tr>
+
+        </table>
+    </body>
+</html>

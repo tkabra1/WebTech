@@ -9,12 +9,43 @@
 
     <script type="text/javascript">
         
+        var slides = new Array ("Images/tiger1.jpg", "Images/tiger2.jpg", "Images/tiger3.jpg", "Images/tiger4.jpg")
+        var colors = new Array ("Blue", "Red", "Yellow", "Green")
+        var i = 0;
+        var j = 0;
+       
+       function animate(){
+           
+           var img = document.getElementById("tiger");
+           var border = document.getElementById("bordercolor");
+           
+           if (i == slides.length && j == colors.length){
+               i=0;
+               j=0;
+           }
+           
+           img.src=slides[i];
+           img.style.borderColor=colors[j];
+           i++;
+           j++;
+           
+           setTimeout("animate()", 1000);
 
+       
+       }
+       
     </script>
 </head>
-<body>
+
+
+<body onload = "animate()">
+   
     <p>
-    <img src="tiger1.jpg" alt="Slide Show of Tigers" title="Tigers"/>
+    <img id = "tiger" src="Images/tiger1.jpg" alt="Slide Show of Tigers" title="Tigers" />
     </p>
+    
+    
 </body>
+
+
 </html>

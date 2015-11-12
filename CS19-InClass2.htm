@@ -23,13 +23,48 @@
     </style>
         
     <script type="text/javascript">
+    var i=0;
+    var msglist = new Array ("Hey Jude, don't make it bad", "Take a sad song and make it better", "remember to let her into your heart", "Then you can start to make it better");
+    function messUp(){
+        var msg=document.getElementById("msg");
+        if (i==msglist.length){
+            i=0;
+        }
+        msg.innerHTML=msglist[i];
+        i++;
+        setTimeout("messUp()", 2000);
+    }
+    var p = 300; k = 0;
+    function doScroll(){
+        document.getElementById("msg").style.left = p + "px";
+        if ( p > 800){
+        p = 304;
+    ++ k;
+    if ( k == msglist.length)
+    {
+    k = 0;
+    }
+    document.getElementById("msg").innerHTML = msglist[k];
+    document.getElementById("msg").style.left = p + "px";
+    }
+    else
+	{
+        p = p + 5;
+    }
+    setTimeout("doScroll()", 100);
+}
+
+    
       
     </script>
 </head>
 <body>
     <h1> Moving Text</h1>
     <div>
-        <h2 id ="msg">This text will move</h2>       
+        <h2 id ="msg">This text will move</h2> 
+            
     </div>
+    <button onclick="messUp()">Change Text</button>
+        <button onclick="doScroll()">Scroll Text</button>  
 </body>
 </html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Q4Mid.htm</title>
+        <style type="text/css">
+
+            p {
+                margin: 30px 250px 30px 250px;
+                font-family: cursive;
+                color: navy;
+            }
+            h1 {
+                text-align: center;
+                font-family: Arial;
+            }
+        
+        
+        
+        </style>
+        <script type="text/javascript">
+            function emotion(){
+                var myform=document.getElementById("myform");
+                var img=document.getElementById("pic");
+                var text=myform.text.value;
+                
+                if (text=="happy"){
+                    img.src="Images/smiley(2).jpg";
+                }
+                else if (text=="sad"){
+                    img.src="Images/frown.jpg";
+                }
+                else if (text==""){
+                    img.src="Images/angry.jpg";
+                }
+                else{
+                    alert("You did not enter a valid input!")
+                }
+            }
+           
+
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1> Find the right face - Q4Mid.htm</h1>
+        <p> This question is worth 25 points. In the form given below, there is a text field. The user may enter one of 2 values: happy or sad (you may assume that it will
+            be entered in lower case only). If "happy" is entered, change the image below the text field to show smiley.jpg. If "sad", use frown.jpg. If neither, show the 
+            angry face in angry.jpg. If nothing is entered, i.e., the text field is blank, then pop up an error message. If a number is entered, pop up a different error message. 
+            All of this must work when the user exits the text field (use the event onblur in the text field to define the function).
+        </p>
+        <form id="myform" action="" method="post">
+
+            <p>Enter your emotion (happy or sad) here: <input name="text" onblur="emotion()" type="text"  size="10" /></p>
+            <p>
+            <img id="pic" src="" alt="Emotional Face" title="" />
+            </p>
+        </form>
+   
+    
+    </body>
+</html>

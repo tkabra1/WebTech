@@ -26,25 +26,16 @@
            
            var myForm = document.getElementById("form1");
            var x, word1, word2, word3;
-           var select1 = "";
-           var select2 = "";
-           var select3 = "";
            
-           for(x=0; x < myForm.select1.length; x++){
-               if(myForm.select1[x].checked){
-                   if(select1 == ""){
-                       word1 = myForm.select1[x].value
-                       select1 = word1;
-                   }
-                   else {
-                       word1 = myForm.select1[x].value;
-                       select1 = select1 + "\n" + word1;
-                   }
-               }
+           if(document.getElementById("word1").value !== "NOPE" && document.getElementById("word2").value !== "NOPE" && document.getElementById("word3").value !=="NOPE"){
+             document.getElementById("results").value = document.getElementById("word1").value + document.getElementById("word2").value + document.getElementById("word3").value;
+           }else{
+             document.getElementById("results").value = "You must select a value from each dropdown";
            }
-           myForm.result.value = select1;
-            
-           return false;   
+           
+           
+           
+           
        }
        
        
@@ -67,27 +58,27 @@
     </p>
     <form id="form1" action="">
 		<p>
-			The sentence is: <br /><textarea name="results" cols="40" rows="2"></textarea>
+			The sentence is: <br /><textarea name="results" id="results" cols="40" rows="2"></textarea>
 		</p>
 		<p>
-			<select name="word1">
-				<option selected  value="">Select Word 1</option>
+			<select name="word1" id="word1">
+				<option selected  value="NOPE">Select Word 1</option>
 				<option value="I">I</option>
 				<option value="We">We</option>
 				<option value="They">They</option>
 			</select>  
 		</p>
 		<p>
-			<select name="word2">
-				<option selected value="">Select Word 2</option>
+			<select name="word2" id="word2">
+				<option selected value="NOPE">Select Word 2</option>
 				<option value=" will"> will</option>
 				<option value=" can"> can</option>
 				<option value=" must"> must</option>
 			</select>  
 		</p>
 		 <p>
-			<select onchange="makeSentence()" name="word3">
-				<option selected value="">Select Word 3</option>
+			<select onchange="makeSentence()" name="word3" id="word3">
+				<option selected value="NOPE">Select Word 3</option>
 				<option value=" eat."> eat.</option>
 				<option value=" study."> study.</option>
 				<option value=" play."> play.</option>
