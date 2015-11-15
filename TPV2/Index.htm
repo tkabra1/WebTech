@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>Tan Kabra - Serial Entrepreneur</title>
+		
+		<style type="text/css">
+		
+        h1 {
+            color: white; 
+            text-align: center;
+            font-family: BebasNeue;
+            }
+        p {
+            text-align: center;
+            }
+			
+		body {
+           background-image: url(citylights.jpeg);
+		   background-repeat: no-repeat;
+		   background-size: cover;
+		   color: white;
+        }
+		
+		p {
+			font-family:arial; color:white; border-color: white; font-size: 2em;
+		}
+		
+		.border {
+			border:5px solid white;
+		}
+	
+		
+		
+		
+        
+        </style>
+		
+		<script>
+			
+		var slides = new Array ("banner1.jpg", "banner2.jpg", "banner3.jpg", "banner4.jpg", "banner5.jpg", "banner6.jpg")
+        var i = 0;
+		
+       	function animate(){
+           var img = document.getElementById("banner"); 
+           if (i == slides.length){
+               i=0;       
+           }
+           
+           img.src=slides[i];        
+           i++;      
+           setTimeout("animate()", 1000); 
+       }
+			</script>
+		
+		</head>
+		
+		<body onload = "animate()">
+			
+			
+			<center><img src="tanheader.png" width="350" alt="Tan Kabra" /></center>
+			
+			<img id = "banner" src="Images/banner1.jpg" alt="Slide Show of Tan" title="tan" />
+			<br>
+			<br>
+			<center><a href = "About.htm"><img src="enterbutton.png" width="150" alt="Enter Site" /></a></center>
+			
+			
+				<br>
+					
+			</body>
+			
+			</html>

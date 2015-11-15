@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<title> Midterm - Q4Mid.htm</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	
+	<style type="text/css">
+	
+	input {
+		width:200px; height:50px;
+		}
+	
+	</style>
+	
+	<script type="text/javascript">
+	
+	function change(id){
+		
+		var img = document.getElementById("picture");
+		var celtics = document.getElementById("celtics");
+		var patriots = document.getElementById("patriots");
+		
+		if (id=="celtics"){
+			img.src="celtics.png";
+		}
+		
+		else {
+			img.src="patriots.jpg";
+		}
+	}
+	
+	function removeBorder(){
+		var img = document.getElementById("picture");
+		img.style.border="none";
+	}
+	
+	function changeBorder(){
+		
+		var img = document.getElementById("picture");
+		
+		img.style.borderColor="red";
+		img.style.borderWidth="10px";
+		img.style.borderStyle="ridge";
+		
+	}
+	
+	
+	</script>
+	
+		</head>
+
+			<body>
+
+			<h1 style="text-align:center; font-family:Arial; font-weight:bold;">Question 4: Manage the Image (25 points)</h1>
+			<p style="font-family:arial;font-size:16pt;color:navy;padding:10px 100px 10px 100px;">
+	
+			This question has two parts: (a) Add appropriate functionality to the two buttons below such that 
+			when the first button is clicked, the Celtics image is shown and when the second is clicked,the Patriots image
+			is shown (10 points if written as two separate functions, 15 if written as a single function). 
+   		 	(b) When the mouse is moved over the image (note that only one image is shown at a time), 
+			add a red, ridge border that is 10px thick. When the mouse is removed, the border should disappear (10 points).
+	
+</p>
+		<hr style="height:10px" />
+		<p style="text-align:center">
+	
+	<img onclick="change(this.id)" onmouseover="changeBorder()" onmouseout="removeBorder()" id="picture" src="" alt="" title="This is the image" style="border:3px dotted black;" width="100" height="100"/>
+			</p>
+		<p style="text-align:center">
+			<input onclick="change(this.id)" id="celtics" type="button" value="Celtics"/> 
+			<input onclick="change(this.id)" id="patriots" type="button" value="Patriots"/>
+		</p>
+
+
+		</body>
+
+	</html>
